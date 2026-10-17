@@ -1,0 +1,13 @@
+[auth]
+enable_anonymous_sign_ins = true
+
+# Requires a valid (anonymous) user JWT.
+[functions.chat-completion]
+verify_jwt = true
+
+# These have their own password + session-token auth.
+[functions.admin-api]
+verify_jwt = false
+
+[functions.admin-ai]
+verify_jwt = false
